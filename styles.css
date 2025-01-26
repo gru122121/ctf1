@@ -1,0 +1,132 @@
+:root {
+    /* Gatekeeper Primary Colors */
+    --knight-armor: #2C3E50;
+    --midnight: #141212;
+    --snow: #FCF6F5;
+    --golden-shield: #F1C40F;
+    --royal-blue: #2980B9;
+
+    /* Neutral Colors */
+    --dark-gray: #1f1f1f;
+    --medium-gray: #2d2d2d;
+    --light-gray: #333;
+    --transparent-white: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: var(--midnight);
+    color: var(--snow);
+    text-align: center;
+    line-height: 1.6;
+}
+
+.container {
+    background-color: var(--dark-gray);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+    margin-bottom: 20px;
+}
+
+.logo img {
+    height: 50px;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+h1 {
+    color: var(--golden-shield);
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+input[type="text"], 
+input[type="password"] {
+    width: 80%;
+    padding: 14px;
+    margin: 15px 0;
+    border: 1px solid var(--light-gray);
+    border-radius: 8px;
+    background-color: var(--medium-gray);
+    color: var(--snow);
+    font-size: 16px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="text"]:focus, 
+input[type="password"]:focus {
+    outline: none;
+    border-color: var(--golden-shield);
+    background-color: var(--dark-gray);
+}
+
+button {
+    padding: 14px 28px;
+    margin-left: 10px;
+    background-color: var(--knight-armor);
+    color: var(--snow);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #34495E;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.response-box {
+    min-height: 70px;
+    background-color: var(--medium-gray);
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid var(--light-gray);
+    border-radius: 8px;
+    text-align: left;
+    white-space: pre-wrap;
+    line-height: 1.5;
+    color: var(--snow);
+    transition: all 0.3s ease;
+}
+
+.response-box.thinking {
+    opacity: 0.7;
+    background-color: var(--transparent-white);
+}
+
+form {
+    margin: 20px 0;
+}
+
+.loading {
+    opacity: 0.5;
+    pointer-events: none;
+}

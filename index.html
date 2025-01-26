@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whop Warden Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .loading {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        
+        #prompt:disabled, button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <span style="font-size: 50px;">⚔️</span>
+        </div>
+        <h1>Gatekeeper</h1>
+        
+        <form onsubmit="return sendPrompt(event)">
+            <input type="text" id="prompt" placeholder="Ask the Warden...">
+            <button type="submit" id="sendButton">Send</button>
+        </form>
+        
+        <div id="response" class="response-box">
+            I am the Whop Warden. How may I assist you today?
+        </div>
+        
+        <form onsubmit="return checkPassword(event)">
+            <input type="password" id="password" placeholder="Enter the secret key...">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
